@@ -6,8 +6,9 @@ application: digital-marketing {
 }
 
 # Includes accessory files like report descriptions, the application.json file, and artwork for the app
-local_dependency: {
-  project: "app-marketing"
+remote_dependency: app-marketing {
+  url: "git://github.com/looker/app-marketing"
+  ref: "8701137f740eb61e1ea021aee711d39f6ac59258"
 }
 
 # Library of common ad metrics definitions and date periods
