@@ -1,10 +1,7 @@
 # Cross channel configuration for Marketing Analytics by Looker
 
-include: "/app-marketing-crosschannel/*.view"
-include: "/app-marketing-crosschannel/*.dashboard"
-
 # TODO: Update cross channel to only select relevant NDTs for the data sources included.
-view: cross_channel_ad_impressions_dt {
+view: cross_channel_ad_impressions_dt_config {
   derived_table: {
     sql:
       SELECT

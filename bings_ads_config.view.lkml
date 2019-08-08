@@ -1,9 +1,5 @@
 # Bing Ads configuration for Marketing Analytics by Looker
 
-include: "/app-marketing-bing-ads-adapter/*.view"
-include: "/app-marketing-bing-ads/*.view"
-include: "/app-marketing-bing-ads/*.dashboard"
-
 # TODO: update Bing Ads schema
 datagroup: bing_ads_etl_datagroup {
   sql_trigger: SELECT COUNT(*) FROM `bings_ads_for_looker.ad_group_performance_daily_report` ;;
@@ -19,61 +15,61 @@ view: bing_ads_config {
   }
 }
 
-view: bing_ad_metrics_base {
+view: bing_ad_metrics_base_config {
   extends: [bing_ad_metrics_base_template]
   # Customize: Add metrics or customize drills / labels / descriptions
 }
 
 # Daily Account Aggregation
-explore: bing_ad_impressions {
+explore: bing_ad_impressions_config {
   extends: [bing_ad_impressions_template]
 }
 
-view: bing_ad_impressions {
+view: bing_ad_impressions_config {
   extends: [bing_ad_impressions_template]
 }
 
 # Daily Campaign Aggregation
-explore: bing_ad_impressions_campaign {
+explore: bing_ad_impressions_campaign_config {
   extends: [bing_ad_impressions_campaign_template]
 }
 
-view: bing_ad_impressions_campaign {
+view: bing_ad_impressions_campaign_config {
   extends: [bing_ad_impressions_campaign_template]
 }
 
 # Daily Ad Group Aggregation
-explore: bing_ad_impressions_ad_group {
+explore: bing_ad_impressions_ad_group_config {
   extends: [bing_ad_impressions_ad_group_template]
 }
 
-view: bing_ad_impressions_ad_group {
+view: bing_ad_impressions_ad_group_config {
   extends: [bing_ad_impressions_ad_group_template]
 }
 
 # Daily Keyword Aggregation
-explore: bing_ad_impressions_keyword {
+explore: bing_ad_impressions_keyword_config {
   extends: [bing_ad_impressions_keyword_template]
 }
 
-view: bing_ad_impressions_keyword {
+view: bing_ad_impressions_keyword_config {
   extends: [bing_ad_impressions_keyword_template]
 }
 
 # Daily Ad Aggregation
-explore: bing_ad_impressions_ad {
+explore: bing_ad_impressions_ad_config {
   extends: [bing_ad_impressions_ad_template]
 }
 
-view: bing_ad_impressions_ad {
+view: bing_ad_impressions_ad_config {
   extends: [bing_ad_impressions_ad_template]
 }
 
-explore: bing_period_comparison {
+explore: bing_period_comparison_config {
   extends: [bing_period_fact]
   hidden: no
 }
 
-view: bing_period_comparison {
+view: bing_period_comparison_config {
   extends: [bing_period_fact]
 }

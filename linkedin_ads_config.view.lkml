@@ -1,8 +1,5 @@
 # LinkedIn Ads configuration for Marketing Analytics by Looker
 
-include: "/app-marketing-linkedin-ads-adapter/*.view"
-include: "/app-marketing-linkedin-ads/*.view"
-include: "/app-marketing-linkedin-ads/*.dashboard"
 
 # TODO: Update LinkedIn Ads schema
 datagroup: linkedin_ads_etl_datagroup {
@@ -20,27 +17,27 @@ view: linkedin_ads_config {
   }
 }
 
-explore: li_period_comparison {
+explore: li_period_comparison_config {
   extends: [li_period_fact]
   hidden: no
 }
 
-view: li_period_comparison {
+view: li_period_comparison_config {
   extends: [li_period_fact]
 }
 
-explore: linkedin_ad_impressions_campaign {
+explore: linkedin_ad_impressions_campaign_config {
   extends: [linkedin_ad_impressions_campaign_template]
 }
 
-view: linkedin_ad_impressions_campaign {
+view: linkedin_ad_impressions_campaign_config {
   extends: [linkedin_ad_impressions_campaign_template]
 }
 
-explore: linkedin_ad_impressions_ad {
+explore: linkedin_ad_impressions_ad_config {
   extends: [linkedin_ad_impressions_ad_template]
 }
 
-view: linkedin_ad_impressions_ad {
+view: linkedin_ad_impressions_ad_config {
   extends: [linkedin_ad_impressions_ad_template]
 }
