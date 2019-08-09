@@ -13,7 +13,7 @@ view: linkedin_ads_config {
   # TODO: Update LinkedIn Ads schema
   dimension: linkedin_ads_schema {
     hidden: yes
-    sql:linkedin_ads;;
+    sql:@{LINKEDIN_ADS_SCHEMA_NAME};;
   }
 }
 

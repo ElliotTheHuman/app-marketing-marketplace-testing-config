@@ -12,7 +12,7 @@ view: adwords_config {
   # TODO: Update Google Ads schema
   dimension: adwords_schema {
     hidden: yes
-    sql:google_ads;;
+    sql:@{ADWORDS_SCHEMA_NAME};;
   }
 }
 

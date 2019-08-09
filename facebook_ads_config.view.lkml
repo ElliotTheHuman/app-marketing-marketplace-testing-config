@@ -13,7 +13,7 @@ view: facebook_ads_config {
   # TODO: Update Facebook Ads schema
   dimension: facebook_ads_schema {
     hidden: yes
-    sql: facebook_ads_for_looker;;
+    sql: @{FACEBOOK_ADS_SCHEMA_NAME};;
   }
 }
 

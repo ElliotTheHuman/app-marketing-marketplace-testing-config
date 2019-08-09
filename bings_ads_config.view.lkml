@@ -11,7 +11,7 @@ view: bing_ads_config {
 
   dimension: bing_ads_schema {
     hidden: yes
-    sql:bings_ads_for_looker;;
+    sql:@{BING_ADS_SCHEMA_NAME};;
   }
 }
 
