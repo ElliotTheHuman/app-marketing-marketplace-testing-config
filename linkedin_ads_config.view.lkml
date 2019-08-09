@@ -19,25 +19,31 @@ view: linkedin_ads_config {
 
 explore: li_period_comparison_config {
   extends: [li_period_fact]
+  extension: required
   hidden: no
 }
 
 view: li_period_comparison_config {
   extends: [li_period_fact]
+  extension: required
 }
 
 explore: linkedin_ad_impressions_campaign_config {
   extends: [linkedin_ad_impressions_campaign_template]
+  extension: required
 }
 
 view: linkedin_ad_impressions_campaign_config {
   extends: [linkedin_ad_impressions_campaign_template]
+  extension: required
 }
 
 explore: linkedin_ad_impressions_ad_config {
   extends: [linkedin_ad_impressions_ad_template]
+  extension: required
 }
 
 view: linkedin_ad_impressions_ad_config {
   extends: [linkedin_ad_impressions_ad_template]
+  extension: required
 }
