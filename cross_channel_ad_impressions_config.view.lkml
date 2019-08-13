@@ -21,60 +21,6 @@ view: cross_channel_ad_impressions_dt_config {
           google_ads_ad_impressions.Clicks AS clicks,
           google_ads_ad_impressions.ConversionValue AS conversionvalue
        FROM ${google_ads_ad_impressions.SQL_TABLE_NAME} as google_ads_ad_impressions
-      UNION ALL
-      SELECT
-        "Bing" as platform,
-          4 AS sort_order,
-          bing_ads_ad_impressions.channel AS channel,
-          bing_ads_ad_impressions._date AS _date,
-          bing_ads_ad_impressions.account_id AS account_id,
-          bing_ads_ad_impressions.account_name AS account_name,
-          bing_ads_ad_impressions.campaign_id AS campaign_id,
-          bing_ads_ad_impressions.campaign_name AS campaign_name,
-          bing_ads_ad_impressions.ad_group_id AS ad_group_id,
-          bing_ads_ad_impressions.ad_group_name AS ad_group_name,
-          bing_ads_ad_impressions.Impressions AS impressions,
-          bing_ads_ad_impressions.Cost AS cost,
-          bing_ads_ad_impressions.Conversions AS conversions,
-          bing_ads_ad_impressions.Clicks AS clicks,
-          bing_ads_ad_impressions.ConversionValue AS conversionvalue
-      FROM ${bing_ads_ad_impressions.SQL_TABLE_NAME} as bing_ads_ad_impressions
-      UNION ALL
-      SELECT
-        "Facebook" as platform,
-          2 AS sort_order,
-          facebook_ads_ad_impressions.channel AS channel,
-          facebook_ads_ad_impressions._date AS _date,
-          facebook_ads_ad_impressions.account_id AS account_id,
-          facebook_ads_ad_impressions.account_name AS account_name,
-          facebook_ads_ad_impressions.campaign_id AS campaign_id,
-          facebook_ads_ad_impressions.campaign_name AS campaign_name,
-          facebook_ads_ad_impressions.ad_group_id AS ad_group_id,
-          facebook_ads_ad_impressions.ad_group_name AS ad_group_name,
-          facebook_ads_ad_impressions.Impressions AS impressions,
-          facebook_ads_ad_impressions.Cost AS cost,
-          facebook_ads_ad_impressions.Conversions AS conversions,
-          facebook_ads_ad_impressions.Clicks AS clicks,
-          null AS conversionvalue
-      FROM ${facebook_ads_ad_impressions.SQL_TABLE_NAME} as facebook_ads_ad_impressions
-      UNION ALL
-      SELECT
-          "LinkedIn" as platform,
-            3 AS sort_order,
-            linkedin_ads_ad_impressions.channel AS channel,
-            linkedin_ads_ad_impressions._date AS _date,
-            linkedin_ads_ad_impressions.account_id AS account_id,
-            linkedin_ads_ad_impressions.account_name AS account_name,
-            linkedin_ads_ad_impressions.campaign_id AS campaign_id,
-            linkedin_ads_ad_impressions.campaign_name AS campaign_name,
-            linkedin_ads_ad_impressions.ad_group_id AS ad_group_id,
-            linkedin_ads_ad_impressions.ad_group_name AS ad_group_name,
-            linkedin_ads_ad_impressions.Impressions AS impressions,
-            linkedin_ads_ad_impressions.Cost AS cost,
-            linkedin_ads_ad_impressions.Conversions AS conversions,
-            linkedin_ads_ad_impressions.Clicks AS clicks,
-            linkedin_ads_ad_impressions.ConversionValue AS conversionvalue
-        FROM ${linkedin_ads_ad_impressions.SQL_TABLE_NAME} as linkedin_ads_ad_impressions
       ;;
   }
 }
